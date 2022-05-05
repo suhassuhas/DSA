@@ -26,6 +26,7 @@
 
 
 class Solution:
+    # Time - Space = O(n),O(n)
     def backspaceCompare(self, s: str, t: str) -> bool:
         def build(s):
             ans = []
@@ -37,6 +38,7 @@ class Solution:
             return "".join(ans)
         return build(s) == build(t)
     
+    # Time - Space = O(n),O(1)
     def backspaceCompare1(self,s:str,t:str) -> bool:
         def getNextChar(string,pointer):
             num_of_backspaces = 0
